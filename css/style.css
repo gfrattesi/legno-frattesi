@@ -1,0 +1,104 @@
+/*!-----FUENTES-----*/
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap'); /*Fuente título*/ /*font-family: 'Julius Sans One', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&display=swap'); /*Fuente subtitulo*/ /*font-family: 'Barlow Condensed', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300&display=swap'); /*Fuente texto general*/ /*font-family: 'Urbanist', sans-serif;*/
+
+/*!-----RESET-----*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*!-----GRID LAYOUT-----*/
+
+.grid-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 90px auto 90px;
+    gap: 0px 0px;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+/*!-----HEADER-----*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+}
+
+header h1{
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    margin-left: 50px;
+    color: #191E24;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    padding: 5px 15px 5px 15px;
+}
+
+header nav ul li a:hover{
+    background-color: #B6AD90;
+    color: white;
+    border-radius: 5px;
+}
+
+/*!-----MAIN-----*/
+
+main{
+    grid-area: main;
+}
+.carousel {
+    margin: 0;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: calc(100vh - 90px);
+}
+
+/*!-----FOOTER-----*/
+
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div ul{
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+}
+
+footer div ul li a{
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    color: #191E24;
+    font-size: 1em;
+    padding: 5px 15px 5px 15px;
+}
+
+footer div ul li a:hover{
+    background-color: #B6AD90;
+    color: white;
+    border-radius: 5px;
+}
