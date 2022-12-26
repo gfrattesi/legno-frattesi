@@ -44,6 +44,7 @@ header nav ul{
     list-style: none;
     display: flex;
     margin-right: 50px;
+    margin-bottom: 0;
 }
 
 header nav ul li a{
@@ -72,6 +73,83 @@ main{
 .carousel-item img {
     object-fit: cover;
     height: calc(100vh - 90px);
+}
+
+.carousel-item h5{
+    font-family: 'Urbanist', sans-serif;
+    color: #191E24;
+    font-weight: 600;
+}
+
+.carousel-item p{
+    font-family: 'Urbanist', sans-serif;
+    color: #191E24;
+}
+
+/*!-----MAIN COTIZADOR-----*/
+
+.contenedor-cotizador {
+    width: 60%;
+    margin: 0px auto;
+    background-color: #B6AD90;
+}
+
+.contenedor-cotizador form {
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor-cotizador form h3 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    padding: 10px;
+}
+
+.estilos-inputs{
+    width: 200px;
+    height: 2em;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    text-align: center;
+}
+
+.estilos-inputs option{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    text-align: center;
+}
+
+.botones {
+    width: 120px;
+    height: 2em;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.parrafos-cotizador{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5em;
+    color:#191E24;
+    text-align: center;
+    padding: 5px auto 5px;
+    margin: 10px auto 10px;
+}
+
+.promo{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: whitesmoke;
+    text-align: center;
+    width: 500px;
+    height: auto;
+    padding: 5px auto 5px;
+    margin: 10px auto 10px;
 }
 
 /*!-----FOOTER-----*/

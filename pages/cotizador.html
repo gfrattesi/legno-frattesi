@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Legno</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="grid-contenedor">
         <header>
@@ -26,7 +28,58 @@
             <!-----FIN NAV----->
         </header>
         <main>
-            <section>
+            <section class="contenedor-cotizador">
+                <form action="" method="" enctype="" id="formulario">
+                    <h3>Elegí tu línea</h3>
+                    <div class="selectorLinea">
+                        <label for="linea"></label>
+                        <select name="linea" class="estilos-inputs" id="linea">
+                            <option value="0">Línea</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="minimal">Minimal</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+                    <h3>Ingresá el largo de tu mueble</h3>
+                    <div>
+                        <label for="largo"></label>
+                        <input type="number" name="largo" class="estilos-inputs" id="largo" min="1" max="8" step="0.1" placeholder="Largo">
+                    </div>
+                    <h3>Elegí la terminación de tu mueble</h3>
+                    <div class="selectorTerminacion">
+                        <label for="terminacion"></label>
+                        <select name="terminacion" class="estilos-inputs" id="terminacion">
+                            <option value="0">Terminación</option>
+                            <option value="melamina color">Melamina Blanca/Color</option>
+                            <option value="melamina texturada">Melamina Texturada</option>
+                            <option value="rauvisio">Rauvisio</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="botones" id="btn">Cotizar</button>
+                    </div>
+                    <div class="parrafos-cotizador" id="contenedorResultado">
+                    </div>
+                    <div>
+                        <h3>Elegí la cantidad de cuotas</h3>
+                        <div>
+                            <select name="selectorCuotas" class="estilos-inputs" id="selectorCuotas">Cuotas
+                                <option value="0"></option>
+                                <option value="1">1 (0% de interés)</option>
+                                <option value="3">3 (12% de interés)</option>
+                                <option value="6">6 (24% de interés)</option>
+                                <option value="12">12 (36% de interés)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="parrafos-cotizador" id="valorCuotas">
+                    </div>
+                    <div class="promo" id="promo">
+                    </div>
+                    <div>
+                        <button class="botones" id="btn-compra">Confirmar</button>
+                    </div>
+                </form>
             </section>
         </main>
         <footer>
@@ -48,5 +101,7 @@
             </div>
         </footer>
     </div>
+    <script src="../main.js"></script>
 </body>
+
 </html>
