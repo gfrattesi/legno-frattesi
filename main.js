@@ -1,6 +1,7 @@
 
 //! FUNCIONES
 
+//FUNCIÓN PARA INCREMENTAR PRECIO POR SELECCIÓN DE TERMINACIÓN
 const incrementoTerminacion = (linea) =>{
     switch (terminacion){
         case "melamina color":
@@ -18,6 +19,7 @@ const incrementoTerminacion = (linea) =>{
     return precioIncrementado;
 }
 
+//FUNCIÓN PARA CALCULAR PRECIO FINAL DEL MUEBLE
 const calcularPrecioFinal = (largo) => {
     switch (linea){
         case "vintage":
@@ -36,6 +38,7 @@ const calcularPrecioFinal = (largo) => {
     return precioFinal;
 }
 
+//FUNCIÓN PARA CALCULAR EL VALOR DE LAS CUOTAS
 const calcularCuotas = (precio) =>{
     cantidadCuotas = parseInt(document.getElementById("selectorCuotas").value);
     divValorCuotas = document.getElementById ("valorCuotas");
@@ -81,6 +84,7 @@ let precioFinal;
 
 //! OBJETOS (CLASE CONSTRUCTORA)
 
+//CLASE PARA CREAR LOS MUEBLES BASE
 class Mueble {
     constructor (linea, precio){
         this.linea = linea;
@@ -88,6 +92,7 @@ class Mueble {
     }
 }
 
+//CLASE PARA CREAR TERMINACIONES
 class Terminacion {
     constructor (terminacion, precio){
         this.terminacion = terminacion;
@@ -95,6 +100,7 @@ class Terminacion {
     }
 }
 
+//CLASE PARA CREAR EL MUEBLE COTIZADO CON LOS VALORES INGRESADOS POR EL USUARIO
 class MuebleCotizado {
     constructor (linea, terminacion, largo, precio, cantidadCuotas, valorCuotas){
         this.linea = linea;
@@ -127,6 +133,7 @@ const terminaciones = [melaminaColor, melaminaTexturada, rauvisio];
 
 //! EVENTOS
 
+//COTIZADOR: CALCULA EL PRECIO DEL MUEBLE SEGÚN LÍNEA, LARGO Y TERMINACIÓN
 botonCotizar.onclick = (e) => {
     e.preventDefault();
     terminacion = terminacionMueble.value;
@@ -136,11 +143,13 @@ botonCotizar.onclick = (e) => {
     contenedorResultado.innerHTML = `<p>Precio final: $${precioFinal} </p>`;
 }
 
+//MUESTRA AL USUARIO EL VALOR DE LAS CUOTAS DE FORMA DINÁMICA SEGÚN SU SELECCIÓN
 selectorCuotas = document.getElementById("selectorCuotas");
 selectorCuotas.onclick = () =>{
     calcularCuotas(precioFinal);
 }
 
+//CONFIRMA LA COTIZACIÓN Y GENERA ARRAY CON LOS DATOS DEL MUEBLE Y FORMA DE PAGO
 botonCompra.onclick = (e) => {   
     e.preventDefault();
     const muebleCotizado = new MuebleCotizado (linea, terminacion, largo, precioFinal, cantidadCuotas, valorCuotas);
