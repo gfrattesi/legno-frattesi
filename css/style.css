@@ -113,6 +113,7 @@ main{
     font-size: 1em;
     color: #191E24;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .estilos-inputs option{
@@ -123,7 +124,7 @@ main{
 }
 
 .botones {
-    width: 120px;
+    width: 140px;
     height: 2em;
     font-family: 'Urbanist', sans-serif;
     font-size: 1em;
@@ -150,6 +151,96 @@ main{
     height: auto;
     padding: 5px auto 5px;
     margin: 10px auto 10px;
+}
+
+#button{
+    height: 40px;
+    width: 140px;
+}
+
+.oculto{
+    display: none;
+}
+
+#contenedor-resumen{
+    margin: 20px;
+    width: auto;
+    height: auto;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1em;
+    color: #191E24;
+    text-align: center;
+    background-color: ghostwhite;
+}
+
+.margenes{
+    padding: 10px;
+}
+
+/*!-----MAIN CONTACTO-----*/
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    padding: 20px;
+}
+
+.formulario-contacto h2{
+    color: #191E24;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+.campos{
+    border: none;
+    border-bottom: solid 1.5px #B6AD90;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 350px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    color:#191E24;
+    background-color: rgb(250, 250, 250);
+}
+
+.selector{
+    width: 350px;
+    height: 2em;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    color: #191e24bb;
+    text-align: center;
+    margin-top: 20px;
+    border: #B6AD90 solid 1px;
+}
+
+.cuadro-texto{
+    width: 350px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    color: #191E24;
+    text-align: center;
+    margin-top: 20px;
+    border: #B6AD90 solid 1px;
+    text-align: start;
+    padding: 10px;
+}
+
+.adjunto{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8em;
+    color: #191E24;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-contacto{
+    margin-right: 10px;
 }
 
 /*!-----FOOTER-----*/

@@ -29,11 +29,11 @@
         </header>
         <main>
             <section class="contenedor-cotizador">
-                <form action="" method="" enctype="" id="formulario">
+                <form action="" method="" enctype="" id="form">
                     <h3>Elegí tu línea</h3>
                     <div class="selectorLinea">
                         <label for="linea"></label>
-                        <select name="linea" class="estilos-inputs" id="linea">
+                        <select name="linea" class="estilos-inputs" id="linea" required>
                             <option value="0">Línea</option>
                             <option value="vintage">Vintage</option>
                             <option value="minimal">Minimal</option>
@@ -43,12 +43,13 @@
                     <h3>Ingresá el largo de tu mueble</h3>
                     <div>
                         <label for="largo"></label>
-                        <input type="number" name="largo" class="estilos-inputs" id="largo" min="1" max="8" step="0.1" placeholder="Largo">
+                        <input type="number" name="largo" class="estilos-inputs" id="largo" min="1" max="8" step="0.1"
+                            placeholder="Largo" required>
                     </div>
                     <h3>Elegí la terminación de tu mueble</h3>
                     <div class="selectorTerminacion">
                         <label for="terminacion"></label>
-                        <select name="terminacion" class="estilos-inputs" id="terminacion">
+                        <select name="terminacion" class="estilos-inputs" id="terminacion" required>
                             <option value="0">Terminación</option>
                             <option value="melamina color">Melamina Blanca/Color</option>
                             <option value="melamina texturada">Melamina Texturada</option>
@@ -61,14 +62,14 @@
                     <div class="parrafos-cotizador" id="contenedorResultado">
                     </div>
                     <div>
-                        <h3>Elegí la cantidad de cuotas</h3>
+                        <h3>Elegí tu financiación</h3>
                         <div>
-                            <select name="selectorCuotas" class="estilos-inputs" id="selectorCuotas">Cuotas
+                            <select name="selectorCuotas" class="estilos-inputs" id="selectorCuotas" required>Cuotas
                                 <option value="0"></option>
-                                <option value="1">1 (0% de interés)</option>
-                                <option value="3">3 (12% de interés)</option>
-                                <option value="6">6 (24% de interés)</option>
-                                <option value="12">12 (36% de interés)</option>
+                                <option value="1">1 cuota (0% de interés)</option>
+                                <option value="3">3 cuotas (12% de interés)</option>
+                                <option value="6">6 cuotas (24% de interés)</option>
+                                <option value="12">12 cuotas (36% de interés)</option>
                             </select>
                         </div>
                     </div>
@@ -76,10 +77,42 @@
                     </div>
                     <div class="promo" id="promo">
                     </div>
+                    <div class="datos">
+                        <h3>Ingresá tus datos</h3>
+                        <div>
+                            <label for="nombre"></label>
+                            <input type="text" name="nombre" placeholder="Nombre" class="estilos-inputs"
+                                id="nombre-cotiz" required>
+                        </div>
+                        <div>
+                            <label for="apellido"></label>
+                            <input type="text" name="apellido" placeholder="Apellido" class="estilos-inputs"
+                                id="apellido-cotiz" required>
+                        </div>
+                        <div>
+                            <label for="correo"></label>
+                            <input type="email" name="correo" placeholder="Email" class="estilos-inputs"
+                                id="email-cotiz" required>
+                        </div>
+                        <div>
+                            <label for="cel"></label>
+                            <input type="tel" name="cel" placeholder="Teléfono" class="estilos-inputs" id="tel-cotiz" required>
+                        </div>
+                    </div>
                     <div>
                         <button class="botones" id="btn-compra">Confirmar</button>
                     </div>
+                    <div id="contenedor-resumen"></div>
+                    <div>
+                        <input type="submit" class="botones oculto" id="button" value="Enviar Cotización" >
+                        <!--<button class="botones oculto" id="btn-envio">Enviar Cotización</button>-->
+                    </div>
                 </form>
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script type="text/javascript">
+                    emailjs.init('sog46fcXexmgnrjMD')
+                </script>
             </section>
         </main>
         <footer>
@@ -101,6 +134,7 @@
             </div>
         </footer>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../main.js"></script>
 </body>
 

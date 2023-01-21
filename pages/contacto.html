@@ -27,6 +27,47 @@
         </header>
         <main>
             <section>
+                <form class="formulario-contacto" action="">
+                    <h2>Contactanos:</h2>
+                    <div>
+                        <label for="nombre"></label>
+                        <input class="campos" type="text" name="nombre" placeholder="Nombre" id="form-nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellido"></label>
+                        <input class="campos" type="text" name="apellido" placeholder="Apellido" id="form-apellido" required>
+                    </div>
+                    <div>
+                        <label for="correo"></label>
+                        <input class="campos" type="email" name="correo" placeholder="Correo" id="form-correo" required>
+                    </div>
+                    <div>
+                        <label for="cel"></label>
+                        <input class="campos" type="tel" name="cel" placeholder="Celular" id="form-cel" required>
+                    </div>
+                    <div>
+                        <label for="direccion"></label>
+                        <input class="campos" type="text" name="direccion" placeholder="Dirección" id="form-direccion" required>
+                    </div>
+                    <div>
+                        <label for="ciudad"></label>
+                        <input class="campos" type="text" name="ciudad" placeholder="Ciudad" id="form-ciudad" required>
+                    </div>
+                    <div>
+                        <select class="selector" name="" id="form-asunto">
+                            <option value="cotizacion">Cotización a medida</option>
+                            <option value="trabajo">Quiero trabajar con ustedes</option>
+                            <option value="consulta">Consulta general</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea class="cuadro-texto" name="" id="form-consulta" cols="30" rows="10" placeholder="Dejanos tu consulta"></textarea>
+                    </div>
+                    <div>
+                        <button type="reset" class="botones btn-contacto" id="form-reset">Borrar</button>
+                        <button type="submit" class="botones btn-contacto" id="form-submit">Enviar</button>
+                    </div>
+                </form>
             </section>
         </main>
         <footer>
@@ -48,5 +89,7 @@
             </div>
         </footer>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../formContacto.js"></script>
 </body>
 </html>
